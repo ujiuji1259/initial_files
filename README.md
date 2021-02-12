@@ -12,3 +12,8 @@ pip install jedi
 pip install flake8
 pip install autopep8
 ```
+
+### centosにvim8 (with python3)をダウンロード
+[事前準備](https://qiita.com/kiwi-bird/items/5539d094731e82df8427)
+
+[うまく行かなかった時](https://lesguillemets.github.io/blog/2014/06/22/vim-python3.html)
