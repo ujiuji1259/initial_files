@@ -98,6 +98,10 @@ call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 nnoremap sb :<C-u>Unite buffer -buffer-name=file<CR>
 noremap sf :Unite file_mru<CR>
 
+" insertモードのまま右に移動。括弧補完で便利
+inoremap <C-f> <C-g>U<Right>
+inoremap <C-f><C-f> <C-g>U<ESC><S-a>
+
 " nerdtree
 nnoremap :tree :NERDTreeToggle
 
