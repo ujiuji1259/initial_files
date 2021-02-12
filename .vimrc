@@ -4,10 +4,44 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/neomru.vim'
 Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'kana/vim-submode'
+Plug 'dense-analysis/ale'
+"Plug 'davidhalter/jedi-vim'
+Plug 'Shougo/neocomplete.vim'
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'jmcantrell/vim-virtualenv'
+Plug 'kuroitu/pyceberg'
+
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'deoplete-plugins/deoplete-jedi'
 
 call plug#end()
 
+" color scheme
+colorscheme pyceberg
+
+" unite関連
 let g:unite_enable_start_insert=1
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+" linter (ALE)
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_fix_on_save = 1
+
+" バックアップファイル、スワップファイルを作成しない
+set nowritebackup
+set nobackup
+set noswapfile
+
 "ウィンドウ周り
 nnoremap s <Nop>
 nnoremap sj <C-w>j
@@ -73,3 +107,4 @@ let g:python_highlight_all = 1
 
 filetype plugin on
 autocmd BufRead,BufNewFile *.py setfiletype python
+
