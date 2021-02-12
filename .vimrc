@@ -97,6 +97,9 @@ call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 nnoremap sb :<C-u>Unite buffer -buffer-name=file<CR>
 noremap sf :Unite file_mru<CR>
 
+" nerdtree
+nnoremap :tree :NERDTreeToggle
+
 " tabの設定
 nnoremap    [Tag]   <Nop>
 nmap    t [Tag]
