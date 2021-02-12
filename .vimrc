@@ -11,6 +11,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'kuroitu/pyceberg'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
