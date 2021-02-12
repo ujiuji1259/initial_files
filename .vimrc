@@ -12,6 +12,8 @@ Plug 'jmcantrell/vim-virtualenv'
 Plug 'kuroitu/pyceberg'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -78,6 +80,17 @@ call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 "uniteの設定
 nnoremap sb :<C-u>Unite buffer -buffer-name=file<CR>
 noremap sf :Unite file_mru<CR>
+
+" tabの設定
+nnoremap    [Tag]   <Nop>
+nmap    t [Tag]
+for n in range(1, 9)
+    execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
+endfor
+map <silent> [Tag]c :tablast <bar> tabnew<CR>
+map <silent> [Tag]x :tabclose<CR>
+map <silent> [Tag]n :tabnext<CR>
+map <silent> [Tag]p :tabprevious<CR>
 
 syntax enable "シンタックスハイライト
 set t_Co=256 "256色
