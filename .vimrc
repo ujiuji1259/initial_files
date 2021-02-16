@@ -33,9 +33,10 @@ call plug#end()
 " color scheme
 colorscheme pyceberg
 
-" <Leader>f{char} to move to {char}
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
+map f <Plug>(easymotion-fl)
+map t <Plug>(easymotion-tl)
+map F <Plug>(easymotion-Fl)
+map T <Plug>(easymotion-Tl)
 "
 " " s{char}{char} to move to {char}{char}
 nmap s <Plug>(easymotion-overwin-f2)
